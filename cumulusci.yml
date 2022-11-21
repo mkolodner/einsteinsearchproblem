@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.69.0'
+project:
+    name: einsteinsearchproblem
+    package:
+        name: einsteinsearchproblem
+        api_version: '55.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/einsteinsearchproblem/tests
+            options:
+                outputdir: robot/einsteinsearchproblem/results
+
+    robot_testdoc:
+        options:
+            path: robot/einsteinsearchproblem/tests
+            output: robot/einsteinsearchproblem/doc/einsteinsearchproblem_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
